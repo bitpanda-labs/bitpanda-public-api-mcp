@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.bitpanda.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - DUMMY-KEY
+    method: GET
+    uri: https://api.bitpanda.com/v1/fiatwallets
+  response:
+    body:
+      string: '{"data":[{"type":"fiat_wallet","attributes":{"fiat_id":"17","fiat_symbol":"BGN","balance":"0.00","name":"BGN
+        Wallet","pending_transactions_count":0},"id":"1f07770a-c64d-610c-bcda-114409ffae1d"},{"type":"fiat_wallet","attributes":{"fiat_id":"3","fiat_symbol":"CHF","balance":"0.00","name":"CHF
+        Wallet","pending_transactions_count":0},"id":"1891849a-3f44-4edf-b427-b10009c0a907"},{"type":"fiat_wallet","attributes":{"fiat_id":"11","fiat_symbol":"CZK","balance":"0.00","name":"CZK
+        Wallet","pending_transactions_count":0},"id":"74a04106-b12c-4750-aa92-e585e31d2228"},{"type":"fiat_wallet","attributes":{"fiat_id":"14","fiat_symbol":"DKK","balance":"0.00","name":"DKK
+        Wallet","pending_transactions_count":0},"id":"d9f3b046-6d3c-48f7-b064-7e65bfbe67dc"},{"type":"fiat_wallet","attributes":{"fiat_id":"1","fiat_symbol":"EUR","balance":"0.00","name":"EUR
+        Wallet","pending_transactions_count":0},"id":"d461aba3-65a6-413b-abb8-bb6ea833435b"},{"type":"fiat_wallet","attributes":{"fiat_id":"4","fiat_symbol":"GBP","balance":"2.00","name":"GBP
+        Wallet","pending_transactions_count":0},"id":"6a93c731-6885-44a5-a29b-ef54a3aec065"},{"type":"fiat_wallet","attributes":{"fiat_id":"10","fiat_symbol":"HUF","balance":"0.00","name":"HUF
+        Wallet","pending_transactions_count":0},"id":"14d9fba5-3a4e-44d7-8c88-8cc8d38e2d15"},{"type":"fiat_wallet","attributes":{"fiat_id":"12","fiat_symbol":"NOK","balance":"0.00","name":"NOK
+        Wallet","pending_transactions_count":0},"id":"bc1354fa-b085-4c59-85e4-599c9c081eff"},{"type":"fiat_wallet","attributes":{"fiat_id":"9","fiat_symbol":"PLN","balance":"0.00","name":"PLN
+        Wallet","pending_transactions_count":0},"id":"987fbb98-b0cf-4d5f-9dae-573e31288034"},{"type":"fiat_wallet","attributes":{"fiat_id":"15","fiat_symbol":"RON","balance":"0.00","name":"RON
+        Wallet","pending_transactions_count":0},"id":"e616bd27-36e3-42c6-af90-cfc8f79ae6e7"},{"type":"fiat_wallet","attributes":{"fiat_id":"13","fiat_symbol":"SEK","balance":"0.00","name":"SEK
+        Wallet","pending_transactions_count":0},"id":"1961cbdf-a8e1-4cae-a796-c1077ec508d1"},{"type":"fiat_wallet","attributes":{"fiat_id":"8","fiat_symbol":"TRY","balance":"0.00","name":"TRY
+        Wallet","pending_transactions_count":0},"id":"b9ff814b-e4cb-45b4-aef9-1253a851f847"},{"type":"fiat_wallet","attributes":{"fiat_id":"2","fiat_symbol":"USD","balance":"0.00","name":"USD
+        Wallet","pending_transactions_count":0},"id":"9155b3b2-54f0-4e07-93a3-6ef30c813237"}],"last_user_action":{"date_iso8601":"2025-10-08T19:30:43+02:00","unix":"1759944643"}}'
+    headers:
+      CF-RAY:
+      - 98b75e269a077e9c-DUB
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 17:30:43 GMT
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-headers:
+      - origin, content-type, access-token, x-bitpanda-academy, x-tracking-id, If-None-Match,
+        If-Match, x-bitpanda-app-web, x-datadog-trace-id, x-datadog-parent-id, x-datadog-origin,
+        x-datadog-sampling-priority, bp-broker-user-api-token-id
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, private
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '2493'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      x-envoy-upstream-service-time:
+      - '85'
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

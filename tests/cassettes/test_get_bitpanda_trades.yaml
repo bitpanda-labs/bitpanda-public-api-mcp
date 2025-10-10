@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.bitpanda.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - DUMMY-KEY
+    method: GET
+    uri: https://api.bitpanda.com/v1/trades
+  response:
+    body:
+      string: '{"data":[{"type":"trade","attributes":{"status":"finished","type":"sell","cryptocoin_id":"26","cryptocoin_symbol":"WAVES","fiat_id":"4","amount_fiat":"2.00","amount_cryptocoin":"2.70196457","fiat_to_eur_rate":"1.14666637","wallet_id":"abdbfb11-0edd-4013-8edb-e160201a6d32","fiat_wallet_id":"6a93c731-6885-44a5-a29b-ef54a3aec065","time":{"date_iso8601":"2025-09-23T10:23:43+02:00","unix":"1758615823"},"price":"0.74","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"fee":{"type":"fee","attributes":{"fee_percentage":null,"fee_amount_in_fiat":"0.00000000"}},"is_fee_transparent":true},"id":"1f098569-bdf2-6fb0-0b22-3654326e33ed"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"1","cryptocoin_symbol":"BTC","fiat_id":"1","amount_fiat":"80.00","amount_cryptocoin":"0.00121395","fiat_to_eur_rate":"1.00000000","wallet_id":"5827c8cb-1eb1-40f0-a7c5-3f1d92062997","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2024-03-12T11:56:48+01:00","unix":"1710241008"},"price":"65900.13","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"1eee05f3-83a1-66b0-4b51-85f97bbcadaf"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"13","cryptocoin_symbol":"MIOTA","fiat_id":"1","amount_fiat":"10.00","amount_cryptocoin":"38.65514124","fiat_to_eur_rate":"1.00000000","wallet_id":"1ed643c6-08e2-6200-8fd3-821d2037a0a8","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2024-02-15T11:49:33+01:00","unix":"1707994173"},"price":"0.2586","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"1eecbefe-44fc-6780-c84d-82d2c17e20e5"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"26","cryptocoin_symbol":"WAVES","fiat_id":"1","amount_fiat":"6.00","amount_cryptocoin":"2.70196457","fiat_to_eur_rate":"1.00000000","wallet_id":"abdbfb11-0edd-4013-8edb-e160201a6d32","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2024-01-10T20:12:37+01:00","unix":"1704913957"},"price":"2.22","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"1eeafec3-4868-6d80-f119-11a9543351cf"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"433","cryptocoin_symbol":"POL","fiat_id":"1","amount_fiat":"10.00","amount_cryptocoin":"15.72362545","fiat_to_eur_rate":"1.00000000","wallet_id":"cc206c29-cb19-4601-8277-79153002e01d","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2023-08-02T18:39:47+02:00","unix":"1690994387"},"price":"0.6359","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"1ee31532-f591-6d40-1b77-d6c01c8e96ee"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"27","cryptocoin_symbol":"USDT","fiat_id":"1","amount_fiat":"20.00","amount_cryptocoin":"20.18630445","fiat_to_eur_rate":"1.00000000","wallet_id":"1dd6daa4-0560-4aff-b75d-9e37ae48b665","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2022-07-26T18:28:30+02:00","unix":"1658852910"},"price":"0.9907","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"8a617369-f509-44e6-8a54-d0031ec486cd"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"6","cryptocoin_symbol":"LSK","fiat_id":"1","amount_fiat":"30.00","amount_cryptocoin":"29.94524617","fiat_to_eur_rate":"1.00000000","wallet_id":"f3181f81-d948-4720-862f-d2f41f71e970","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2022-07-14T12:18:23+02:00","unix":"1657793903"},"price":"1.00","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"0b028aa0-8446-4f2d-872d-0b802b08b4ab"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"28","cryptocoin_symbol":"XAU","fiat_id":"1","amount_fiat":"12.00","amount_cryptocoin":"0.20940835","fiat_to_eur_rate":"1.00000000","wallet_id":"fb338d09-2b18-4910-947b-a38c6636629f","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2022-04-25T10:13:35+02:00","unix":"1650874415"},"price":"57.30","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"7defe08e-f7ad-46e3-baa7-ecd610f7f577"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"371","cryptocoin_symbol":"GOOGL","fiat_id":"1","amount_fiat":"20.00","amount_cryptocoin":"0.00805341","fiat_to_eur_rate":"1.00000000","wallet_id":"d1cd52ec-456d-43e0-8a1f-e83d68de2490","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2022-03-22T14:18:01+01:00","unix":"1647955081"},"premium":"0.10","price":"2483.41","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"dc5832d8-c7aa-489a-a095-5c03d08a9ea2"},{"type":"trade","attributes":{"status":"finished","type":"buy","cryptocoin_id":"28","cryptocoin_symbol":"XAU","fiat_id":"1","amount_fiat":"20.00","amount_cryptocoin":"0.35543224","fiat_to_eur_rate":"1.00000000","wallet_id":"fb338d09-2b18-4910-947b-a38c6636629f","fiat_wallet_id":"d461aba3-65a6-413b-abb8-bb6ea833435b","time":{"date_iso8601":"2022-03-22T14:02:59+01:00","unix":"1647954179"},"price":"56.26","is_swap":false,"is_savings":false,"tags":[],"bfc_used":false,"is_card":false,"is_fee_transparent":false},"id":"5d9dfc75-6b0e-49e9-a0a8-a1743e315cb3"}],"meta":{"total_count":11,"page_size":10,"page":1,"page_number":1,"next_cursor":"5d9dfc75-6b0e-49e9-a0a8-a1743e315cb3"},"links":{"next":"?page_number=2&page_size=10","last":"?page_number=2&page_size=10","self":"?page_number=1&page_size=10"}}'
+    headers:
+      CF-RAY:
+      - 98b6a6afcc0dbdc5-DUB
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 15:25:29 GMT
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-headers:
+      - origin, content-type, access-token, x-bitpanda-academy, x-tracking-id, If-None-Match,
+        If-Match, x-bitpanda-app-web, x-datadog-trace-id, x-datadog-parent-id, x-datadog-origin,
+        x-datadog-sampling-priority, bp-broker-user-api-token-id
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, private
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5945'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      x-envoy-upstream-service-time:
+      - '99'
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1
