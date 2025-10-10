@@ -1,0 +1,4 @@
+[lint]
+extend-ignore = [
+    "S101"
+]

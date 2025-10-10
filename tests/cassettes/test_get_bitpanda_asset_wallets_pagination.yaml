@@ -1,0 +1,156 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.bitpanda.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - DUMMY-KEY
+    method: GET
+    uri: https://api.bitpanda.com/v1/asset-wallets
+  response:
+    body:
+      string: '{"data":{"type":"data","attributes":{"cryptocoin":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"1","cryptocoin_symbol":"BTC","balance":"0.00000000","is_default":true,"name":"BTC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"5827c8cb-1eb1-40f0-a7c5-3f1d92062997"},{"type":"wallet","attributes":{"cryptocoin_id":"3","cryptocoin_symbol":"LTC","balance":"0.00121395","is_default":true,"name":"LTC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"10fa22aa-0a1d-4405-878b-76e94eb83f1d"},{"type":"wallet","attributes":{"cryptocoin_id":"5","cryptocoin_symbol":"ETH","balance":"0.00000000","is_default":true,"name":"ETH
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"206a2c64-f327-44b0-83f5-491101e8259a"},{"type":"wallet","attributes":{"cryptocoin_id":"6","cryptocoin_symbol":"LSK","balance":"29.89382617","is_default":true,"name":"LSK
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"f3181f81-d948-4720-862f-d2f41f71e970"},{"type":"wallet","attributes":{"cryptocoin_id":"8","cryptocoin_symbol":"XRP","balance":"0.00000000","is_default":true,"name":"XRP
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1ed6fe0a-3815-61c2-9074-b2dd8819eb08"},{"type":"wallet","attributes":{"cryptocoin_id":"13","cryptocoin_symbol":"MIOTA","balance":"0.00000000","is_default":true,"name":"MIOTA
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1ed643c6-08e2-6200-8fd3-821d2037a0a8"},{"type":"wallet","attributes":{"cryptocoin_id":"26","cryptocoin_symbol":"WAVES","balance":"0.00000000","is_default":true,"name":"WAVES
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"abdbfb11-0edd-4013-8edb-e160201a6d32"},{"type":"wallet","attributes":{"cryptocoin_id":"27","cryptocoin_symbol":"USDT","balance":"10.28820567","is_default":true,"name":"USDT
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1dd6daa4-0560-4aff-b75d-9e37ae48b665"},{"type":"wallet","attributes":{"cryptocoin_id":"46","cryptocoin_symbol":"BNB","balance":"0.00000000","is_default":true,"name":"BNB
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"8f09deaf-ce22-43eb-a78f-7973a7d65618"},{"type":"wallet","attributes":{"cryptocoin_id":"304","cryptocoin_symbol":"REN","balance":"0.00000000","is_default":true,"name":"REN
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"ba0d3eba-02d6-4c17-88f4-52a4ff79289d"},{"type":"wallet","attributes":{"cryptocoin_id":"419","cryptocoin_symbol":"CHZ","balance":"0.00000000","is_default":true,"name":"CHZ
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"433ed686-231c-4bb4-b94d-555da78d6a00"},{"type":"wallet","attributes":{"cryptocoin_id":"428","cryptocoin_symbol":"1INCH","balance":"0.00000000","is_default":true,"name":"1INCH
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d2e26292-1193-442d-88f4-9a583fb5aa70"},{"type":"wallet","attributes":{"cryptocoin_id":"433","cryptocoin_symbol":"POL","balance":"3.46776000","is_default":true,"name":"MATIC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"cc206c29-cb19-4601-8277-79153002e01d"},{"type":"wallet","attributes":{"cryptocoin_id":"1368","cryptocoin_symbol":"SHIB","balance":"0.00000000","is_default":true,"name":"SHIB
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1eef730d-efbe-6d2e-be7e-8d52ce091e95"},{"type":"wallet","attributes":{"cryptocoin_id":"1394","cryptocoin_symbol":"SRM","balance":"4.86700000","is_default":true,"name":"SRM
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"78c199e9-5add-4ae8-9fdc-ef64faeb212a"},{"type":"wallet","attributes":{"cryptocoin_id":"3881","cryptocoin_symbol":"EUROC","balance":"4.90000000","is_default":true,"name":"EUROC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"18571f32-1bf7-41c4-bf17-f5720082a713"},{"type":"wallet","attributes":{"cryptocoin_id":"3926","cryptocoin_symbol":"SMR","balance":"52.70000000","is_default":true,"name":"SMR
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1edac655-9307-6b5e-bf33-562eb61abb95"},{"type":"wallet","attributes":{"cryptocoin_id":"4107","cryptocoin_symbol":"AZERO","balance":"0.00000000","is_default":true,"name":"AZERO
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1eeb3c6f-d29d-6336-9e03-dd17fc3e3fc5"},{"type":"wallet","attributes":{"cryptocoin_id":"7201","cryptocoin_symbol":"IOTA","balance":"39.65505440","is_default":true,"name":"IOTA
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d2c8b985-883f-40b8-b233-4b41e92b672f"}]}},"commodity":{"metal":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"28","cryptocoin_symbol":"XAU","balance":"0.56484059","is_default":true,"name":"XAU
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"fb338d09-2b18-4910-947b-a38c6636629f"}]}}},"index":{"index":{"type":"collection","attributes":{"wallets":[]}}},"security":{"stock":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"371","cryptocoin_symbol":"GOOGL","balance":"0.00805341","is_default":true,"name":"GOOGL
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d1cd52ec-456d-43e0-8a1f-e83d68de2490"}]}},"etf":{"type":"collection","attributes":{"wallets":[]}},"etc":{"type":"collection","attributes":{"wallets":[]}},"fiat_earn":{"type":"collection","attributes":{"wallets":[]}},"mutual_fund":{"type":"collection","attributes":{"wallets":[]}}},"equity_security":{"equity_stock":{"type":"collection","attributes":{"wallets":[]}},"equity_etf":{"type":"collection","attributes":{"wallets":[]}},"equity_etc":{"type":"collection","attributes":{"wallets":[]}},"equity_right":{"type":"collection","attributes":{"wallets":[]}},"equity_complex_etf":{"type":"collection","attributes":{"wallets":[]}}}}},"last_user_action":{"date_iso8601":"2025-10-08T18:58:34+02:00","unix":"1759942714"}}'
+    headers:
+      CF-RAY:
+      - 98b72f0d1e14d944-DUB
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 16:58:34 GMT
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-headers:
+      - origin, content-type, access-token, x-bitpanda-academy, x-tracking-id, If-None-Match,
+        If-Match, x-bitpanda-app-web, x-datadog-trace-id, x-datadog-parent-id, x-datadog-origin,
+        x-datadog-sampling-priority, bp-broker-user-api-token-id
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, private
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '6256'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      x-envoy-upstream-service-time:
+      - '304'
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.bitpanda.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - DUMMY-KEY
+    method: GET
+    uri: https://api.bitpanda.com/v1/asset-wallets
+  response:
+    body:
+      string: '{"data":{"type":"data","attributes":{"cryptocoin":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"1","cryptocoin_symbol":"BTC","balance":"0.00000000","is_default":true,"name":"BTC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"5827c8cb-1eb1-40f0-a7c5-3f1d92062997"},{"type":"wallet","attributes":{"cryptocoin_id":"3","cryptocoin_symbol":"LTC","balance":"0.00121395","is_default":true,"name":"LTC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"10fa22aa-0a1d-4405-878b-76e94eb83f1d"},{"type":"wallet","attributes":{"cryptocoin_id":"5","cryptocoin_symbol":"ETH","balance":"0.00000000","is_default":true,"name":"ETH
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"206a2c64-f327-44b0-83f5-491101e8259a"},{"type":"wallet","attributes":{"cryptocoin_id":"6","cryptocoin_symbol":"LSK","balance":"29.89382617","is_default":true,"name":"LSK
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"f3181f81-d948-4720-862f-d2f41f71e970"},{"type":"wallet","attributes":{"cryptocoin_id":"8","cryptocoin_symbol":"XRP","balance":"0.00000000","is_default":true,"name":"XRP
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1ed6fe0a-3815-61c2-9074-b2dd8819eb08"},{"type":"wallet","attributes":{"cryptocoin_id":"13","cryptocoin_symbol":"MIOTA","balance":"0.00000000","is_default":true,"name":"MIOTA
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1ed643c6-08e2-6200-8fd3-821d2037a0a8"},{"type":"wallet","attributes":{"cryptocoin_id":"26","cryptocoin_symbol":"WAVES","balance":"0.00000000","is_default":true,"name":"WAVES
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"abdbfb11-0edd-4013-8edb-e160201a6d32"},{"type":"wallet","attributes":{"cryptocoin_id":"27","cryptocoin_symbol":"USDT","balance":"10.28820567","is_default":true,"name":"USDT
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1dd6daa4-0560-4aff-b75d-9e37ae48b665"},{"type":"wallet","attributes":{"cryptocoin_id":"46","cryptocoin_symbol":"BNB","balance":"0.00000000","is_default":true,"name":"BNB
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"8f09deaf-ce22-43eb-a78f-7973a7d65618"},{"type":"wallet","attributes":{"cryptocoin_id":"304","cryptocoin_symbol":"REN","balance":"0.00000000","is_default":true,"name":"REN
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"ba0d3eba-02d6-4c17-88f4-52a4ff79289d"},{"type":"wallet","attributes":{"cryptocoin_id":"419","cryptocoin_symbol":"CHZ","balance":"0.00000000","is_default":true,"name":"CHZ
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"433ed686-231c-4bb4-b94d-555da78d6a00"},{"type":"wallet","attributes":{"cryptocoin_id":"428","cryptocoin_symbol":"1INCH","balance":"0.00000000","is_default":true,"name":"1INCH
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d2e26292-1193-442d-88f4-9a583fb5aa70"},{"type":"wallet","attributes":{"cryptocoin_id":"433","cryptocoin_symbol":"POL","balance":"3.46776000","is_default":true,"name":"MATIC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"cc206c29-cb19-4601-8277-79153002e01d"},{"type":"wallet","attributes":{"cryptocoin_id":"1368","cryptocoin_symbol":"SHIB","balance":"0.00000000","is_default":true,"name":"SHIB
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1eef730d-efbe-6d2e-be7e-8d52ce091e95"},{"type":"wallet","attributes":{"cryptocoin_id":"1394","cryptocoin_symbol":"SRM","balance":"4.86700000","is_default":true,"name":"SRM
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"78c199e9-5add-4ae8-9fdc-ef64faeb212a"},{"type":"wallet","attributes":{"cryptocoin_id":"3881","cryptocoin_symbol":"EUROC","balance":"4.90000000","is_default":true,"name":"EUROC
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"18571f32-1bf7-41c4-bf17-f5720082a713"},{"type":"wallet","attributes":{"cryptocoin_id":"3926","cryptocoin_symbol":"SMR","balance":"52.70000000","is_default":true,"name":"SMR
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1edac655-9307-6b5e-bf33-562eb61abb95"},{"type":"wallet","attributes":{"cryptocoin_id":"4107","cryptocoin_symbol":"AZERO","balance":"0.00000000","is_default":true,"name":"AZERO
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"1eeb3c6f-d29d-6336-9e03-dd17fc3e3fc5"},{"type":"wallet","attributes":{"cryptocoin_id":"7201","cryptocoin_symbol":"IOTA","balance":"39.65505440","is_default":true,"name":"IOTA
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d2c8b985-883f-40b8-b233-4b41e92b672f"}]}},"commodity":{"metal":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"28","cryptocoin_symbol":"XAU","balance":"0.56484059","is_default":true,"name":"XAU
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"fb338d09-2b18-4910-947b-a38c6636629f"}]}}},"index":{"index":{"type":"collection","attributes":{"wallets":[]}}},"security":{"stock":{"type":"collection","attributes":{"wallets":[{"type":"wallet","attributes":{"cryptocoin_id":"371","cryptocoin_symbol":"GOOGL","balance":"0.00805341","is_default":true,"name":"GOOGL
+        Wallet","pending_transactions_count":0,"deleted":false,"is_index":false},"id":"d1cd52ec-456d-43e0-8a1f-e83d68de2490"}]}},"etf":{"type":"collection","attributes":{"wallets":[]}},"etc":{"type":"collection","attributes":{"wallets":[]}},"fiat_earn":{"type":"collection","attributes":{"wallets":[]}},"mutual_fund":{"type":"collection","attributes":{"wallets":[]}}},"equity_security":{"equity_stock":{"type":"collection","attributes":{"wallets":[]}},"equity_etf":{"type":"collection","attributes":{"wallets":[]}},"equity_etc":{"type":"collection","attributes":{"wallets":[]}},"equity_right":{"type":"collection","attributes":{"wallets":[]}},"equity_complex_etf":{"type":"collection","attributes":{"wallets":[]}}}}},"last_user_action":{"date_iso8601":"2025-10-08T18:58:35+02:00","unix":"1759942715"}}'
+    headers:
+      CF-RAY:
+      - 98b72f100f92be3b-DUB
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 16:58:35 GMT
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-headers:
+      - origin, content-type, access-token, x-bitpanda-academy, x-tracking-id, If-None-Match,
+        If-Match, x-bitpanda-app-web, x-datadog-trace-id, x-datadog-parent-id, x-datadog-origin,
+        x-datadog-sampling-priority, bp-broker-user-api-token-id
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, private
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '6256'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      x-envoy-upstream-service-time:
+      - '158'
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1
