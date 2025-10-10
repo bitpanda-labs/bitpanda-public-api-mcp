@@ -5,6 +5,8 @@ Thin FastAPI wrapper around Bitpanda Public API that exposes commonly used endpo
 - **REST base URL (local)**: `http://localhost:8000`
 - **MCP endpoint**: `http://localhost:8000/mcp`
 
+> **Disclaimer**: This project has been partially vibe coded. While functional, some parts may not follow conventional best practices or may have been developed in a more experimental manner.
+
 ### Requirements
 
 - **Python**: >=3.11
