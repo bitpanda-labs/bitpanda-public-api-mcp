@@ -325,4 +325,4 @@ if __name__ == "__main__":  # pragma: no cover
         describe_all_responses=True,
     )
     mcp.mount_http()
-    uvicorn.run(app, host="0.0.0.0", port=8000)  # noqa: S104
+    uvicorn.run(app, host=settings.server_host, port=settings.server_port)

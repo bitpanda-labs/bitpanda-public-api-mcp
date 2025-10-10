@@ -41,8 +41,16 @@ cp .env.example .env
 # then edit .env
 ```
 
-- Set `BITPANDA_BASE_URL`.
-- Set `APP_ENV`.
+**Required variables:**
+
+- `BITPANDA_BASE_URL` - Base URL for Bitpanda Public API (e.g., `https://api.bitpanda.com/v1`)
+- `APP_ENV` - Environment identifier (e.g., `local`, `staging`, `production`)
+- `SERVER_HOST` - Host address to bind the server (default: `0.0.0.0`)
+- `SERVER_PORT` - Port to bind the server (default: `8000`)
+
+**Optional variables:**
+
+- `BITPANDA_API_KEY` - API key for local development only (not recommended for production)
 
 ### Run the server
 
@@ -123,6 +131,12 @@ export BITPANDA_BASE_URL="https://api.bitpanda.com/v1"
 ```
 
 - Request timeout defaults to 30s.
+- Server host and port can be configured via environment variables:
+
+```bash
+export SERVER_HOST="127.0.0.1"  # Bind to localhost only
+export SERVER_PORT="8080"        # Use custom port
+```
 
 ### Development
 
