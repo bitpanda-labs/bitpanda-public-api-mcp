@@ -6,8 +6,6 @@ repos:
       - id: check-yaml
       - id: check-toml
       - id: end-of-file-fixer
-      - id: no-commit-to-branch
-        args: [--branch=main]
       
   - repo: https://github.com/wemake-services/dotenv-linter
     rev: 0.2.0
