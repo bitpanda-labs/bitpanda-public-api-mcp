@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.11.0"
 
 fastapi-mcp = "^0.4.0"
-fastapi = "^0.115.2"
+fastapi = "^0.120.2"
 uvicorn = {version = "^0.30.6", extras = ["standard"]}
 python-dotenv = "^1.1.0"
 python-json-logger = "^3.3.0"
