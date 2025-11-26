@@ -1,91 +1,37 @@
+"""Wallet schemas for Bitpanda Developer API v1.1."""
+
+from datetime import datetime
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
-from .common import PageLinks, PaginationMeta, TimePoint
+WalletType = Literal["STAKING", "CRYPTO_INDEX"]
 
 
-class WalletAttributes(BaseModel):
-    cryptocoin_id: str | None = None
-    cryptocoin_symbol: str | None = None
-    balance: str
-    is_default: bool
-    name: str
-    pending_transactions_count: int
-    deleted: bool
-    is_index: bool
+class Wallet(BaseModel):
+    """Wallet data."""
+
+    wallet_id: str = Field(json_schema_extra={"format": "uuid"})
+    asset_id: str = Field(json_schema_extra={"format": "uuid"})
+    wallet_type: WalletType | None = None
+    index_asset_id: str | None = Field(default=None, json_schema_extra={"format": "uuid"})
+    last_credited_at: datetime
+    balance: float
+
     model_config = ConfigDict(extra="ignore")
 
 
-class WalletResource(BaseModel):
-    category: str
-    type: Literal["wallet"]
-    attributes: WalletAttributes
-    id: str
+class WalletResponse(BaseModel):
+    """Paginated response for wallets."""
+
+    start_cursor: str | None = None
+    end_cursor: str | None = None
+    has_previous_page: bool | None = None
+    has_next_page: bool | None = None
+    page_size: int | None = None
+    data: list[Wallet] | None = None
+    status: int | None = None
+    error: str | None = None
+    message: str | None = None
+
     model_config = ConfigDict(extra="ignore")
-
-
-class CollectionAttributes(BaseModel):
-    wallets: list[WalletResource]
-
-
-class CollectionResource(BaseModel):
-    type: Literal["collection"]
-    attributes: CollectionAttributes
-
-
-class AssetWalletsDataAttributes(BaseModel):
-    cryptocoin: CollectionResource | None = None
-    commodity: dict[str, CollectionResource] | None = None
-    index: dict[str, CollectionResource] | None = None
-    security: dict[Literal["stock", "etf", "etc", "fiat_earn", "mutual_fund"], CollectionResource] | None = (
-        None
-    )
-    equity_security: (
-        dict[
-            Literal["equity_stock", "equity_etf", "equity_etc", "equity_right", "equity_complex_etf"],
-            CollectionResource,
-        ]
-        | None
-    ) = None
-    model_config = ConfigDict(extra="allow")
-
-
-class AssetWalletsData(BaseModel):
-    type: Literal["data"]
-    attributes: AssetWalletsDataAttributes
-
-
-class AssetWalletsResponse(BaseModel):
-    data: AssetWalletsData
-    meta: PaginationMeta
-    links: PageLinks
-    last_user_action: TimePoint
-
-
-class FiatWalletAttributes(BaseModel):
-    fiat_id: str
-    fiat_symbol: str
-    balance: str
-    name: str
-    model_config = ConfigDict(extra="ignore")
-
-
-class FiatWalletResource(BaseModel):
-    type: str
-    attributes: FiatWalletAttributes
-    id: str
-
-
-class FiatWalletsResponse(BaseModel):
-    data: list[FiatWalletResource]
-    meta: PaginationMeta
-    links: PageLinks
-    last_user_action: TimePoint | None = None
-
-
-class CryptoWalletsResponse(BaseModel):
-    data: list[WalletResource]
-    meta: PaginationMeta
-    links: PageLinks
-    last_user_action: TimePoint | None = None
