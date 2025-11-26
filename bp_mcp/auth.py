@@ -10,7 +10,7 @@ class APIKey(BaseModel):
 
 
 async def get_api_key(
-    _: Request,
+    request: Request,
     authorization: Annotated[
         str | None, Header(alias="Authorization", description="Use 'Bearer <API_KEY>'")
     ] = None,

@@ -1,15 +1,14 @@
-## Bitpanda Public API → MCP Server (FastAPI)
+## Bitpanda Developer API → MCP Server (FastAPI)
 
-Thin FastAPI wrapper around Bitpanda Public API that exposes commonly used endpoints as both REST and MCP tools using `fastapi_mcp`.
+Thin FastAPI wrapper around Bitpanda Developer API that exposes endpoints as MCP tools using `fastmcp`.
 
-- **REST base URL (local)**: `http://localhost:8000`
 - **MCP endpoint**: `http://localhost:8000/mcp`
 
 > **Disclaimer**: This project has been partially vibe coded. While functional, some parts may not follow conventional best practices or may have been developed in a more experimental manner.
 
 ### Requirements
 
-- **Python**: >=3.11
+- **Python**: 3.11.x
 - **Poetry**
 
 ### Install
@@ -54,7 +53,7 @@ cp .env.example .env
 
 ### Run the server
 
-To ensure the MCP endpoint (`/mcp`) is mounted, run the module entrypoint:
+Run the module entrypoint to start the MCP server:
 
 ```bash
 # Using Poetry
@@ -64,34 +63,41 @@ poetry run python -m bp_mcp.bitpanda_mcp_server
 python -m bp_mcp.bitpanda_mcp_server
 ```
 
-This starts the API on `http://localhost:8000`.
+This starts the API on `http://localhost:8000/mcp`.
 
-### REST endpoints
+### API Endpoints
 
-All endpoints require authentication as described above.
+All endpoints require authentication via `X-Api-Key` header and use cursor-based pagination.
 
-- `GET /bitpanda/trades` — list trades
-  - Query: `type=buy|sell`, `cursor`, `page_size (1..500)`
-- `GET /bitpanda/asset-wallets` — grouped asset wallets
-- `GET /bitpanda/fiatwallets` — fiat wallets
-- `GET /bitpanda/fiatwallets/transactions` — fiat transactions
-  - Query: `type`, `status`, `cursor`, `page_size (1..500)`
-- `GET /bitpanda/wallets` — crypto wallets (flat list)
-- `GET /bitpanda/wallets/transactions` — crypto transactions
-  - Query: `type`, `status`, `cursor`, `page_size (1..500)`
+- `GET /v1/assets/{asset_id}` — get asset information by ID
+  - Path param: `asset_id` (UUID)
+  - Returns: Asset data (id, name, symbol)
+
+- `GET /v1/transactions` — get paginated user transactions
+  - Query params: `wallet_id`, `flow` (INCOMING/OUTGOING), `asset_id[]`, `from_including`, `to_excluding`, `before`, `after`, `page_size` (1-100, default 25)
+  - Returns: Paginated transactions with cursor-based navigation
+
+- `GET /v1/wallets/` — get paginated user wallets
+  - Query params: `asset_id[]`, `index_asset_id[]`, `last_credited_at_from_including`, `last_credited_at_to_excluding`, `before`, `after`, `page_size` (1-100, default 25)
+  - Returns: Paginated wallets with cursor-based navigation
 
 Example requests:
 
 ```bash
-# Last 50 trades
-curl -sS \
-  -H "Authorization: Bearer $API_KEY" \
-  "http://localhost:8000/bitpanda/trades?page_size=50" | jq .
-
-# Crypto transactions (finished withdrawals), paginated
+# Get asset by ID
 curl -sS \
   -H "X-Api-Key: $API_KEY" \
-  "http://localhost:8000/bitpanda/wallets/transactions?type=withdrawal&status=finished&page_size=100" | jq .
+  "http://localhost:8000/v1/assets/ea8962d5-edee-11eb-9bf0-06502b1fe55d" | jq .
+
+# Get transactions for a specific wallet
+curl -sS \
+  -H "X-Api-Key: $API_KEY" \
+  "http://localhost:8000/v1/transactions?wallet_id=1f0738f2-6834-6d28-8550-49d834ee5b52&page_size=50" | jq .
+
+# Get all wallets
+curl -sS \
+  -H "X-Api-Key: $API_KEY" \
+  "http://localhost:8000/v1/wallets/?page_size=100" | jq .
 ```
 
 ### MCP usage
@@ -101,7 +107,7 @@ The server exposes an MCP endpoint at `http://localhost:8000/mcp`. Most MCP clie
 #### Adding to Claude Desktop
 
 ```bash
-claude mcp add bitpanda-developer-api http://localhost:8000/mcp --transport http --header "Authorization: Bearer xxxxxxxxxxxxxx"
+claude mcp add bitpanda-developer-api/mcp --transport http --header "Authorization: Bearer xxxxxxxxxxxxxx"
 ```
 
 #### Manual configuration
@@ -111,7 +117,7 @@ Example JSON config snippet for an http-based MCP client:
 ```json
 {
   "mcpServers": {
-    "developers-api-mcp-server": {
+    "bitpanda-developer-api": {
       "type": "http",
       "url": "http://localhost:8000/mcp",
       "headers": {
@@ -127,7 +133,7 @@ Example JSON config snippet for an http-based MCP client:
 - Upstream base URL defaults to a staging endpoint and can be overridden via `BITPANDA_BASE_URL`:
 
 ```bash
-export BITPANDA_BASE_URL="https://api.bitpanda.com/v1"
+export BITPANDA_BASE_URL="https://developer.bitpanda.com"
 ```
 
 - Request timeout defaults to 30s.
@@ -148,8 +154,11 @@ poetry run pre-commit run --all
 
 ### Project layout
 
-- `bp_mcp/bitpanda_mcp_server.py` — FastAPI app + MCP mounting
+- `bp_mcp/bitpanda_mcp_server.py` — FastAPI app + MCP mounting with Developer API v1.1 endpoints
 - `bp_mcp/schemas/` — Pydantic models for requests/responses
-- `bp_mcp/auth.py` — auth dependency
-- `bp_mcp/utils.py` — HTTP helpers, query param builders
+- `bp_mcp/auth.py` — Authentication dependency (supports Bearer token and X-Api-Key)
+- `bp_mcp/utils.py` — HTTP client helper for Bitpanda API requests
+- `bp_mcp/exception_handlers.py` — Error handling with Developer API error format
+- `tests/` — Test suite
 - `pyproject.toml` — dependencies and tooling
+- `ruff.toml`, `mypy.ini` — linting and typing config

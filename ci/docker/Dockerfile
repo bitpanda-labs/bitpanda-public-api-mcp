@@ -1,5 +1,4 @@
-# pure python3.11 image + bitpanda certificates installed
-FROM public.ecr.aws/docker/library/python:3.11-slim-bookworm
+FROM public.ecr.aws/docker/library/python:3.11-slim-trixie
 
 ARG USER_NAME="bp_mcp"
 ARG USER_HOME="/usr/src/app"
