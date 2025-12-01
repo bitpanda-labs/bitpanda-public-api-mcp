@@ -65,41 +65,6 @@ python -m bp_mcp.bitpanda_mcp_server
 
 This starts the API on `http://localhost:8000/mcp`.
 
-### API Endpoints
-
-All endpoints require authentication via `X-Api-Key` header and use cursor-based pagination.
-
-- `GET /v1/assets/{asset_id}` — get asset information by ID
-  - Path param: `asset_id` (UUID)
-  - Returns: Asset data (id, name, symbol)
-
-- `GET /v1/transactions` — get paginated user transactions
-  - Query params: `wallet_id`, `flow` (INCOMING/OUTGOING), `asset_id[]`, `from_including`, `to_excluding`, `before`, `after`, `page_size` (1-100, default 25)
-  - Returns: Paginated transactions with cursor-based navigation
-
-- `GET /v1/wallets/` — get paginated user wallets
-  - Query params: `asset_id[]`, `index_asset_id[]`, `last_credited_at_from_including`, `last_credited_at_to_excluding`, `before`, `after`, `page_size` (1-100, default 25)
-  - Returns: Paginated wallets with cursor-based navigation
-
-Example requests:
-
-```bash
-# Get asset by ID
-curl -sS \
-  -H "X-Api-Key: $API_KEY" \
-  "http://localhost:8000/v1/assets/ea8962d5-edee-11eb-9bf0-06502b1fe55d" | jq .
-
-# Get transactions for a specific wallet
-curl -sS \
-  -H "X-Api-Key: $API_KEY" \
-  "http://localhost:8000/v1/transactions?wallet_id=1f0738f2-6834-6d28-8550-49d834ee5b52&page_size=50" | jq .
-
-# Get all wallets
-curl -sS \
-  -H "X-Api-Key: $API_KEY" \
-  "http://localhost:8000/v1/wallets/?page_size=100" | jq .
-```
-
 ### MCP usage
 
 The server exposes an MCP endpoint at `http://localhost:8000/mcp`. Most MCP clients can pass HTTP headers for auth.
@@ -107,7 +72,7 @@ The server exposes an MCP endpoint at `http://localhost:8000/mcp`. Most MCP clie
 #### Adding to Claude Desktop
 
 ```bash
-claude mcp add bitpanda-developer-api/mcp --transport http --header "Authorization: Bearer xxxxxxxxxxxxxx"
+claude mcp add bitpanda-developer-api http://localhost:8000/mcp --transport http --header "Authorization: Bearer xxxxxxxxxxxxxx"
 ```
 
 #### Manual configuration
