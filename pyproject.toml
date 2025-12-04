@@ -9,7 +9,7 @@ readme = "README.md"
 python = "~3.11.0"
 
 fastmcp = "^2.0.0"
-fastapi = "^0.123.0"
+fastapi = "^0.123.8"
 python-dotenv = "^1.1.0"
 python-json-logger = "^3.3.0"
 urllib3 = ">=2.5.0" # vuln fix
