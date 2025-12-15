@@ -43,7 +43,6 @@ cp .env.example .env
 **Required variables:**
 
 - `BITPANDA_BASE_URL` - Base URL for Bitpanda Public API (e.g., `https://api.bitpanda.com/v1`)
-- `APP_ENV` - Environment identifier (e.g., `local`, `staging`, `production`)
 - `SERVER_HOST` - Host address to bind the server (default: `0.0.0.0`)
 - `SERVER_PORT` - Port to bind the server (default: `8000`)
 

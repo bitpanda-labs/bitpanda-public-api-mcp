@@ -11,7 +11,8 @@ def test_health_endpoint_returns_healthy(client: TestClient) -> None:
     assert response.status_code == HTTPStatus.OK
     data = response.json()
     assert data["status"] == "OK"
-    assert data["environment"] in {"local", "staging", "production"}
+    assert "base_url" in data
+    assert data["base_url"].startswith("http")
 
 
 @pytest.mark.vcr

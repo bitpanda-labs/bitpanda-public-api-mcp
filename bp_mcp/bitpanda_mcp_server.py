@@ -50,7 +50,7 @@ register_exception_handlers(app)
 
 @app.get("/healthz", response_model=dict[str, str])
 async def health_check() -> dict[str, str]:
-    return {"status": "OK", "environment": settings.environment}
+    return {"status": "OK", "base_url": settings.bitpanda_base_url}
 
 
 # ---------------------------
