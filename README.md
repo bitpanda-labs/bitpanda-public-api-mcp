@@ -92,22 +92,6 @@ Example JSON config snippet for an http-based MCP client:
 }
 ```
 
-### Configuration notes
-
-- Upstream base URL defaults to a staging endpoint and can be overridden via `BITPANDA_BASE_URL`:
-
-```bash
-export BITPANDA_BASE_URL="https://developer.bitpanda.com"
-```
-
-- Request timeout defaults to 30s.
-- Server host and port can be configured via environment variables:
-
-```bash
-export SERVER_HOST="127.0.0.1"  # Bind to localhost only
-export SERVER_PORT="8080"        # Use custom port
-```
-
 ### Development
 
 Lint and type-check:
