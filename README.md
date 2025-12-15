@@ -43,7 +43,6 @@ cp .env.example .env
 **Required variables:**
 
 - `BITPANDA_BASE_URL` - Base URL for Bitpanda Public API (e.g., `https://api.bitpanda.com/v1`)
-- `APP_ENV` - Environment identifier (e.g., `local`, `staging`, `production`)
 - `SERVER_HOST` - Host address to bind the server (default: `0.0.0.0`)
 - `SERVER_PORT` - Port to bind the server (default: `8000`)
 
@@ -91,22 +90,6 @@ Example JSON config snippet for an http-based MCP client:
     }
   }
 }
-```
-
-### Configuration notes
-
-- Upstream base URL defaults to a staging endpoint and can be overridden via `BITPANDA_BASE_URL`:
-
-```bash
-export BITPANDA_BASE_URL="https://developer.bitpanda.com"
-```
-
-- Request timeout defaults to 30s.
-- Server host and port can be configured via environment variables:
-
-```bash
-export SERVER_HOST="127.0.0.1"  # Bind to localhost only
-export SERVER_PORT="8080"        # Use custom port
 ```
 
 ### Development

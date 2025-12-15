@@ -9,9 +9,6 @@ class Settings(BaseModel):
         description="Base URL for Bitpanda Public API (override with BITPANDA_BASE_URL).",
     )
     request_timeout_s: float = Field(default=30.0, ge=1, le=120)
-    environment: str = Field(
-        default_factory=lambda: os.environ["APP_ENV"], description="Environment for the server."
-    )
     server_host: str = Field(
         default_factory=lambda: os.environ["SERVER_HOST"],
         description="Host address to bind the server (override with SERVER_HOST).",
