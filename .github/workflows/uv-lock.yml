@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   sync:
-    if: github.actor == 'dependabot[bot]'
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
