@@ -17,7 +17,7 @@ jobs:
           ref: ${{ github.head_ref }}
           persist-credentials: false
 
-      - uses: astral-sh/setup-uv@v8
+      - uses: astral-sh/setup-uv@v7
         with:
           version: "0.11.23"
 
