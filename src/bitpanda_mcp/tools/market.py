@@ -84,7 +84,7 @@ async def list_prices(
                 try:
                     a = await client.get_asset(aid)
                     return {"asset_id": a.id, "name": a.name, "symbol": a.symbol}
-                except BitpandaAPIError:
+                except (BitpandaAPIError, ValidationError):
                     return {"asset_id": aid, "name": "", "symbol": ""}
 
             result["skipped_assets"] = list(

@@ -158,6 +158,22 @@ async def test_list_prices_skipped_asset_fallback_on_error(mcp_client, mock_rout
     assert result.data["skipped_assets"] == [{"asset_id": "asset-missing", "name": "", "symbol": ""}]
 
 
+async def test_list_prices_skipped_asset_fallback_on_malformed_body(
+    mcp_client, mock_router: respx.MockRouter
+) -> None:
+    mock_router.get("/v1/ticker").respond(json=TICKER_RESPONSE)
+    mock_router.get("/v1/wallets/").respond(
+        json={
+            "data": [{"wallet_id": "w1", "asset_id": "asset-missing", "balance": "2.0"}],
+            "has_next_page": False,
+        }
+    )
+    mock_router.get("/v1/assets/asset-missing").respond(json={"data": {"name": "x"}})
+
+    result = await mcp_client.call_tool("list_prices", {})
+    assert result.data["skipped_assets"] == [{"asset_id": "asset-missing", "name": "", "symbol": ""}]
+
+
 async def test_list_prices_all_assets(mcp_client, mock_router: respx.MockRouter) -> None:
     mock_router.get("/v1/ticker").respond(json=TICKER_RESPONSE)
 

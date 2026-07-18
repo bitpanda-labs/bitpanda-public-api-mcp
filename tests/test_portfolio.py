@@ -93,6 +93,17 @@ async def test_get_portfolio_skipped_asset_fallback_on_error(
     assert result.data["skipped_assets"] == [{"asset_id": "asset-unknown", "name": "", "symbol": ""}]
 
 
+async def test_get_portfolio_skipped_asset_fallback_on_malformed_body(
+    mcp_client, mock_router: respx.MockRouter
+) -> None:
+    mock_router.get("/v1/wallets/").respond(json=WALLETS_RESPONSE)
+    mock_router.get("/v1/ticker").respond(json=TICKER_RESPONSE)
+    mock_router.get("/v1/assets/asset-unknown").respond(json={"data": {"name": "x"}})
+
+    result = await mcp_client.call_tool("get_portfolio", {})
+    assert result.data["skipped_assets"] == [{"asset_id": "asset-unknown", "name": "", "symbol": ""}]
+
+
 async def test_get_portfolio_sort_by_name(mcp_client, mock_router: respx.MockRouter) -> None:
     mock_router.get("/v1/wallets/").respond(json=WALLETS_RESPONSE)
     mock_router.get("/v1/ticker").respond(json=TICKER_RESPONSE)
