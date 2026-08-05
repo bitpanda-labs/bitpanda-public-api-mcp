@@ -4,6 +4,14 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
+> [!IMPORTANT]
+> **This repository is archived**
+> This project is no longer maintained. Bitpanda now provides an official hosted MCP server at:
+> https://mcp.public.bitpanda.com/
+> For setup, authentication, and integration guides, please refer to the official documentation:
+> https://docs.bitpanda.com/
+> We recommend using the hosted MCP instead of self-hosting this implementation.
+
 The official [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for [Bitpanda](https://www.bitpanda.com). Connects AI agents — Claude, Cursor, VS Code Copilot, and any MCP-compatible client — directly to the Bitpanda API, giving them secure, read-only access to your asset portfolio, wallet balances, trade history, and real-time market prices.
 
 Built with [FastMCP 3.x](https://gofastmcp.com), Python 3.11+, and [uv](https://docs.astral.sh/uv/).
